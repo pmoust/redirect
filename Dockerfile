@@ -13,5 +13,6 @@ ADD nginx.conf /etc/nginx.conf
 ADD redirect.sh /redirect.sh
 RUN chmod +x /redirect.sh
 
-ENTRYPOINT /redirect.sh
+ENTRYPOINT ["/bin/bash"]
+CMD ["/redirect.sh"]
 EXPOSE 80
